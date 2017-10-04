@@ -11,9 +11,12 @@ COPY selinux /etc/sysconfig/selinux
 # Install wget, openssl, sed and NodeJS
 RUN yum install -y wget openssl sed &&\
 	package-cleanup -q --leaves | xargs -l1 yum -y remove &&\
-	yum clean all &&\
-	wget http://nodejs.org/dist/v6.11.1/node-v6.11.1-linux-x64.tar.gz &&\
-	tar --strip-components 1 -xzvf node-v* -C /usr/local
+	curl --silent --location https://rpm.nodesource.com/setup_6.x | bash - &&\
+    yum -y install nodejs &&\
+    yum clean all
+
+#wget http://nodejs.org/dist/v6.11.1/node-v6.11.1-linux-x64.tar.gz &&\
+#tar --strip-components 1 -xzvf node-v* -C /usr/local
 
 # Setup the npm config
 RUN npm config set prefix /home/centos/npm -g &&\
