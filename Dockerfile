@@ -19,14 +19,14 @@ RUN yum install -y wget openssl sed &&\
 #tar --strip-components 1 -xzvf node-v* -C /usr/local
 
 # Setup the npm config
-RUN npm config set prefix /home/centos/npm -g &&\
-    npm config set _auth dGVhbS10aG9yLW1hY2hpbmUtdXNlcjpBUDh4d3o2VVdEQjViWEFOVnNKeVJ4NFZEVkQ= -g &&\
-	npm config set email teamthor@weather.com -g &&\
-	npm config set always-auth true -g &&\
-	npm config set registry https://repo.artifacts.weather.com/api/npm/wsi-b2b-virtual/ -g &&\
-    npm install twc-loopback-blueid-api@2.0.20 -g --verbose &&\
-    npm config set _auth -g &&\
-	npm config set email -g
+RUN npm config set prefix /home/centos/npm &&\
+    npm config set _auth dGVhbS10aG9yLW1hY2hpbmUtdXNlcjpBUDh4d3o2VVdEQjViWEFOVnNKeVJ4NFZEVkQ= &&\
+	npm config set email teamthor@weather.com &&\
+	npm config set always-auth true &&\
+	npm config set registry https://repo.artifacts.weather.com/api/npm/wsi-b2b-virtual/ &&\
+    npm install twc-loopback-blueid-api@2.0.20 --verbose &&\
+    npm config set _auth &&\
+	npm config set email
 
 # Expose port
 EXPOSE 3000
