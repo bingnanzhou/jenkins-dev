@@ -24,7 +24,7 @@ RUN npm config set prefix /home/centos/npm -g &&\
 	npm config set email teamthor@weather.com -g &&\
 	npm config set always-auth true -g &&\
 	npm config set registry https://repo.artifacts.weather.com/api/npm/wsi-b2b-virtual/ -g &&\
-    npm install twc-loopback-blueid-api@2.0.20 -g &&\
+    npm install twc-loopback-blueid-api@2.0.20 -g --verbose &&\
     npm config set _auth -g &&\
 	npm config set email -g
 
