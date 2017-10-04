@@ -24,6 +24,7 @@ RUN npm config set prefix /home/centos/npm &&\
 	npm config set email teamthor@weather.com &&\
 	npm config set always-auth true &&\
 	npm config set registry https://repo.artifacts.weather.com/api/npm/wsi-b2b-virtual/ &&\
+	npm install dtrace-provider@0.8.5 &&\
     npm install twc-loopback-blueid-api@2.0.20 --verbose &&\
     npm config set _auth &&\
 	npm config set email
