@@ -11,7 +11,7 @@ COPY selinux /etc/sysconfig/selinux
 # Install wget, openssl, sed and NodeJS
 RUN yum install -y wget openssl sed &&\
 	package-cleanup -q --leaves | xargs -l1 yum -y remove &&\
-	curl --silent --location https://rpm.nodesource.com/setup_6.x | bash - &&\
+	curl --silent --location https://rpm.nodesource.com/setup_7.x | bash - &&\
     yum -y install nodejs &&\
     yum clean all
 
