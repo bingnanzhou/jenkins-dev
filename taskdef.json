@@ -1,5 +1,4 @@
 {
-    "taskDefinition": {
         "status": "ACTIVE", 
         "networkMode": "bridge", 
         "family": "loopback-service", 
@@ -91,5 +90,4 @@
             }
         ], 
         "revision": 13
-    }
 }
