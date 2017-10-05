@@ -1,16 +1,6 @@
 {
-        "status": "ACTIVE", 
         "networkMode": "bridge", 
-        "family": "loopback-service", 
-        "placementConstraints": [], 
-        "requiresAttributes": [
-            {
-                "name": "com.amazonaws.ecs.capability.ecr-auth"
-            }, 
-            {
-                "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
-            }
-        ], 
+        "family": "loopback-service",  
         "volumes": [
             {
                 "host": {}, 
@@ -88,6 +78,5 @@
                     }
                 ]
             }
-        ], 
-        "revision": 13
+        ]
 }
