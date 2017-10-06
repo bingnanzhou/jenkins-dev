@@ -68,7 +68,7 @@
                 "environment": [], 
                 "name": "logstash-api", 
                 "mountPoints": [], 
-                "image": "545220931177.dkr.ecr.us-east-2.amazonaws.com/b2b-dev-repo:logstash-api", 
+                "image": "%REPOSITORY_URI%:logstash-api-v_%BUILD_NUMBER%", 
                 "cpu": 0, 
                 "portMappings": [], 
                 "essential": true, 
