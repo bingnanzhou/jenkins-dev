@@ -1,0 +1,5 @@
+[Artifactory]
+name=Artifactory
+baseurl=https://bingnan.zhou%40weather.com:AKCp5Z327QuddXAN4nSffNLjdd5ZxY4C8TW84T9H6pEmCjx7pFpF27E6mLMtER3XRoDP57eWy@repo.artifacts.weather.com//wsi-b2b-rpm-int/
+enabled=1
+gpgcheck=0
